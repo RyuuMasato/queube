@@ -1,11 +1,11 @@
-import {NameListService} from './name-list.service';
+import {QueueService} from './queue.service';
 
 export function main() {
   describe('NameList Service', () => {
-    let nameListService: NameListService;
+    let nameListService: QueueService;
 
     beforeEach(() => {
-      nameListService = new NameListService;
+      nameListService = new QueueService;
     });
 
     it('should return the list of names', () => {

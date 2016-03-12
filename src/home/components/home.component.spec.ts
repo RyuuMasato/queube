@@ -8,7 +8,7 @@ import {
 import {Component} from 'angular2/core';
 import {DOM} from 'angular2/src/platform/dom/dom_adapter';
 import {HomeComponent} from './home.component';
-import {NameListService} from '../../shared/services/name-list.service';
+import {QueueService} from '../../shared/services/queue.service';
 
 
 export function main() {
@@ -25,7 +25,7 @@ export function main() {
               return homeInstance.nameListService.names.length;
             };
 
-            expect(homeInstance.nameListService).toEqual(jasmine.any(NameListService));
+            expect(homeInstance.nameListService).toEqual(jasmine.any(QueueService));
             expect(nameListLen()).toEqual(4);
             expect(DOM.querySelectorAll(homeDOMEl, 'li').length).toEqual(nameListLen());
 
@@ -43,7 +43,7 @@ export function main() {
 }
 
 @Component({
-  providers: [NameListService],
+  providers: [QueueService],
   selector: 'test-cmp',
   template: '<sd-home></sd-home>',
   directives: [HomeComponent]
