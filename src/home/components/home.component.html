@@ -3,10 +3,15 @@
   Do you know any others? Add to the list yourself.
 </p>
 
-<form (submit)="addName()">
-  <input [(ngModel)]="newName" placeholder="Awesome Computer Scientist">
+<form (submit)="addTrack(trackUrl)">
+  <input [(ngModel)]="trackUrl" placeholder="Awesome Computer Scientist">
   <button type="submit">Add</button>
 </form>
+
+<div class="container"><div class="row"><div class="col-sm-5 col-sm-push-4">
+  <br>
+  <player (click)="play()" [playing]="streamIsPlaying" [track]="currentTrack"></player>
+</div></div></div>
 
 
 <ul>

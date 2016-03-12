@@ -42,8 +42,8 @@ export class SoundCloudService {
   getTrack(track: string) : Promise<SoundCloudTrack> {
     return SC.resolve(track);
   }
-  getStream(trackId) {
-    return this.getTrack(trackId).then((track : SoundCloudTrack) => SC.stream('tracks/' + track.id));
+  getStream(trackid) {
+    return SC.stream('tracks/' + trackid.id);
   }
 
 }
