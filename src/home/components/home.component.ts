@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/common';
 
+import {SoundCloudService} from '../../shared/services/soundcloud.service';
 import {NameListService} from '../../shared/services/name-list.service';
 
 @Component({
@@ -12,7 +13,13 @@ import {NameListService} from '../../shared/services/name-list.service';
 })
 export class HomeComponent {
   newName: string;
-  constructor(public nameListService: NameListService) {}
+  constructor(public nameListService: NameListService, soundCloudService: SoundCloudService) {
+    soundCloudService.getStream('https://soundcloud.com/kevingates/really-really').then((stream) => {
+      stream.play();
+      console.log(stream);
+    });
+    console.log();
+  }
 
   /*
    * @param newname  any text as input.

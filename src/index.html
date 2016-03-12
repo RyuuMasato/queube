@@ -13,7 +13,8 @@
 <body>
 
   <sd-app>Loading...</sd-app>
-
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
   <script>
   // function.name (all IE)
   // Remove once https://github.com/angular/angular/issues/6501 is fixed.
@@ -39,6 +40,7 @@
 
   <!-- shims:js -->
   <!-- endinject -->
+
 
   <% if (ENV === 'dev') { %>
   <script>
