@@ -3,20 +3,17 @@ import {Component, Input} from 'angular2/core';
 @Component({
   selector: 'player',
   styles: [`
-    .button {
-      height: 75px;
-      width: 75px;
-    }
-    .play {
-      content: url("https://drive.google.com/uc?export=download&id=0B94dZWnZA1-ZU1Z1SDBxSl9CQUk");
-      max-height: 100%;
-      max-width: 100%;
-    }
-    .pauze {
-      content: url("https://drive.google.com/uc?export=download&id=0B94dZWnZA1-Zc0x4RTA4WUZKU3c");
-      max-height: 100%;
-      max-width: 100%;
-    }
+.play {
+  content: url("https://drive.google.com/uc?export=download&id=0B94dZWnZA1-ZODB3cGZsN1dvbmM");
+  max-height: 100%;
+  max-width: 100%;
+}
+.pauze {
+  content: url("https://drive.google.com/uc?export=download&id=0B94dZWnZA1-ZbjlWV2VEV2FpQ1k");
+  max-height: 100%;
+  max-width: 100%;
+}
+
   `],
   template: `
     <div class="row">

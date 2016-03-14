@@ -14,6 +14,7 @@ import {RouteParams} from 'angular2/router';
   styleUrls: ['./home.component.css'],
   directives: [FORM_DIRECTIVES, CORE_DIRECTIVES, PlayerComponent]
 })
+
 export class HomeComponent {
   streamIsPlaying : boolean;
   private currentStream;
@@ -38,10 +39,6 @@ export class HomeComponent {
     this.streamIsPlaying = !this.streamIsPlaying;
   }
 
-  /*
-   * @param newname  any text as input.
-   * @returns return false to prevent default form submit behavior to refresh the page.
-   */
   addTrack(trackUrl) {
     this.soundCloudService.getTrack(trackUrl)
       .then(track => {
